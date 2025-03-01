@@ -3,9 +3,7 @@ const { StatusCodes } = require('http-status-codes');
 const config = require('../config');
 const logger = require('../utils/logger');
 
-/**
- * JWT authentication middleware
- */
+
 
 const authenticate = jwt({
   secret: config.jwt.secret,
@@ -13,10 +11,6 @@ const authenticate = jwt({
   credentialsRequired: true,
 });
 
-/**
- * Optional JWT authentication middleware
- * Does not require authentication but will validate the token if present
- */
 
 const optionalAuthenticate = jwt({
   secret: config.jwt.secret,
@@ -24,10 +18,7 @@ const optionalAuthenticate = jwt({
   credentialsRequired: false,
 });
 
-/**
- * Middleware to check if the user has the required role
- * @param {string|string[]} roles - Required role(s)
- */
+
 
 const authorize = (roles) => {
   return (req, res, next) => {

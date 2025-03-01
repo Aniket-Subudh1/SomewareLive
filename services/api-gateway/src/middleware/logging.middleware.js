@@ -1,9 +1,7 @@
 const pinoHttp = require('pino-http');
 const logger = require('../utils/logger');
 
-/**
- * HTTP request logging middleware using pino-http
- */
+
 const requestLogger = pinoHttp({
   logger,
   customLogLevel: (req, res, err) => {

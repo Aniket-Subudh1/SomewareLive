@@ -2,9 +2,7 @@ const rateLimit = require('express-rate-limit');
 const config = require('../config');
 const logger = require('../utils/logger');
 
-/**
- * Basic rate limiting middleware for all routes
- */
+
 const basicLimiter = rateLimit({
   windowMs: config.rateLimit.windowMs,
   max: config.rateLimit.max,
@@ -20,9 +18,7 @@ const basicLimiter = rateLimit({
   }
 });
 
-/**
- * More strict rate limiting for auth routes
- */
+
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 20, // limit each IP to 20 requests per windowMs

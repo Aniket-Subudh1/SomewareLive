@@ -4,11 +4,7 @@ const axios = require('axios');
 const services = require('../config/services');
 const logger = require('../utils/logger');
 
-/**
- * @route GET /health
- * @desc Health check endpoint for API Gateway
- * @access Public
- */
+
 
 router.get('/', async (req, res) => {
   // Basic health check for the API gateway itself
@@ -19,11 +15,6 @@ router.get('/', async (req, res) => {
   });
 });
 
-/**
- * @route GET /health/services
- * @desc Check health of all services
- * @access Public
- */
 
 router.get('/services', async (req, res) => {
   const serviceHealth = {};
