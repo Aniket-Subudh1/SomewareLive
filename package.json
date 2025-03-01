@@ -1,0 +1,20 @@
+{
+  "name": "someware-live",
+  "version": "1.0.0",
+  "description": "A Slido clone with microservices architecture",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Run each service individually\" && exit 1",
+    "dev": "echo \"Run each service individually\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "someware-live",
+    "microservices",
+    "nodejs",
+    "go",
+    "kafka"
+  ],
+  "author": "Aniket Subudhi",
+  "license": "MIT"
+}
